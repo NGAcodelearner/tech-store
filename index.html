@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"> </script>
+    <title>Tech store</title>
+</head>
+<body>
+    <div class="flex flex-col px-6 py-4">
+        <h1 class="text-3xl font-bold text-blue-800 mt-6 pl-4">Tech store</h1>
+        <div class="container flex justify-between items-center gap-4 p-6">
+            <!--search area  -->
+            <input placeholder="Seach products..."  type="text" id="search" 
+            class="rounded-full bg-gray-100 w-full p-2.5 outline-none lg:max-w-[850px] pl-5"
+            />
+            <!-- cart icon -->
+            <span class="relative text-center">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                #
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z"
+                />
+                <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+                </svg>
+                <div id="cart-count" class="bg-red-400 rounded-full text-white w-5 h-5 flex items-center justify-center absolute -top-2 -right-3 px-2 ">0</div>
+            </span>
+        </div>
+
+        <div class="flex lg:flex-col lg:items-center lg:justify-center gap-8 mt-8">
+            <!-- filter  -->
+            <div class="flex flex-col px-4 items-start space-y-4 w-2/5 lg:w-full lg:border-none border-r-2">
+                <h2 class="text-2xl font-semibold"> Filters</h2>
+                <div id="filters" class="text-lg space-y-4 lg:space-y-0 lg:flex lg:justify-center lg:items-center lg:gap-8">
+                    <div>
+                        <input type="checkbox" class="checkbox" id="cameras" >
+                        <label for="cameras">Camera</label>
+                    </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="smartphones" >
+                    <label for="smartphones">Smartphone</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="televisions" >
+                    <label for="televisions">Television</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" id="games" >
+                    <label for="games">Games</label>
+                </div>
+                </div>
+            </div>
+        <!-- product lists -->
+        <div id="products" class="lg:w-full lg:items-center w-3/5 flex-1 px-4 justify-center items-start mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5
+        gap-6 lg:gap-8"></div>
+        </div>   
+    </div>
+
+<script src="/script.js"> </script>
+</body>
+</html>
